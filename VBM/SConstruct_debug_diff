@@ -1,0 +1,15 @@
+276a
+   env['LFLAGS']="/debug"
+.
+274a
+   cflags += ['/Zi','/ZI']
+.
+254a
+   env['LFLAGS']="/debug"
+.
+256a
+   cflags += ['/Zi','/ZI']
+.
+235c
+cld = Builder(action = '$CLINK $DFLAGS /dll $LFLAGS /out:$TARGET $SOURCES')
+.

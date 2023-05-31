@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="3ddp_node|x64">
+      <Configuration>3ddp_node</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UDF_Debug|x64">
+      <Configuration>UDF_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UDF_VS|x64">
+      <Configuration>UDF_VS</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="UDF|x64">
+      <Configuration>UDF</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{E36F76F9-5F89-4DD3-89F2-90DC5A5C388B}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UDF|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UDF_Debug|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UDF_VS|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='3ddp_node|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='UDF|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="FluentDirs.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UDF_Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="FluentDirs.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='UDF_VS|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="FluentDirs.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='3ddp_node|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="FluentDirs.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UDF|x64'">
+    <NMakeIncludeSearchPath>include;$(FLUENT)/win64/3ddp_node;$(FLUENT)/win64/3ddp_host;$(FLUENT)/src/species;$(FLUENT)/src/io;$(FLUENT)/src/main;$(FLUENT)/src/addon-wrapper;$(FLUENT)/src/sphysics;$(FLUENT)/src/numerics;$(FLUENT)/src/pbns;$(FLUENT)/src/udf;$(FLUENT)/src/material;$(FLUENT)/src/models;$(FLUENT)/src/bc;$(FLUENT)/src/mphase;$(FLUENT)/src/storage;$(FLUENT)/src/amg;$(FLUENT)/src/util;$(FLUENT)/src/mesh;$(FLUENT)/src/ht;$(FLUENT)/src/dx;$(FLUENT)/src/turbulence;$(FLUENT)/src/acoustics;$(FLUENT)/src/parallel;$(FLUENT)/src/etc;$(FLUENT)/src/ue;$(FLUENT)/src/dpm;$(FLUENT)/src/dbns;$(FLUENT)/cortex/src;$(FLUENT)/client/src;$(FLUENT)/tgrid/src;$(FLUENT)/multiport/src;$(FLUENT)/multiport/mpi_wrapper/src;$(FLUENT_BASE)/include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeBuildCommandLine>build.bat</NMakeBuildCommandLine>
+    <OutDir>$(SolutionDir)win64</OutDir>
+    <NMakeReBuildCommandLine>rebuild.bat</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>clean.bat</NMakeCleanCommandLine>
+    <IntDir>$(SolutionDir)win64</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UDF_Debug|x64'">
+    <NMakeIncludeSearchPath>include;$(FLUENT)/win64/3ddp_node;$(FLUENT)/win64/3ddp_host;$(FLUENT)/src/species;$(FLUENT)/src/io;$(FLUENT)/src/main;$(FLUENT)/src/addon-wrapper;$(FLUENT)/src/sphysics;$(FLUENT)/src/numerics;$(FLUENT)/src/pbns;$(FLUENT)/src/udf;$(FLUENT)/src/material;$(FLUENT)/src/models;$(FLUENT)/src/bc;$(FLUENT)/src/mphase;$(FLUENT)/src/storage;$(FLUENT)/src/amg;$(FLUENT)/src/util;$(FLUENT)/src/mesh;$(FLUENT)/src/ht;$(FLUENT)/src/dx;$(FLUENT)/src/turbulence;$(FLUENT)/src/acoustics;$(FLUENT)/src/parallel;$(FLUENT)/src/etc;$(FLUENT)/src/ue;$(FLUENT)/src/dpm;$(FLUENT)/src/dbns;$(FLUENT)/cortex/src;$(FLUENT)/client/src;$(FLUENT)/tgrid/src;$(FLUENT)/multiport/src;$(FLUENT)/multiport/mpi_wrapper/src;$(FLUENT_BASE)/include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeBuildCommandLine>debug.bat</NMakeBuildCommandLine>
+    <OutDir>$(SolutionDir)win64</OutDir>
+    <NMakeReBuildCommandLine>rebuild.bat</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>clean.bat</NMakeCleanCommandLine>
+    <IntDir>$(SolutionDir)win64</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UDF_VS|x64'">
+    <NMakeIncludeSearchPath>include;$(FLUENT)/win64/3ddp_node;$(FLUENT)/win64/3ddp_host;$(FLUENT)/src/species;$(FLUENT)/src/io;$(FLUENT)/src/main;$(FLUENT)/src/addon-wrapper;$(FLUENT)/src/sphysics;$(FLUENT)/src/numerics;$(FLUENT)/src/pbns;$(FLUENT)/src/udf;$(FLUENT)/src/material;$(FLUENT)/src/models;$(FLUENT)/src/bc;$(FLUENT)/src/mphase;$(FLUENT)/src/storage;$(FLUENT)/src/amg;$(FLUENT)/src/util;$(FLUENT)/src/mesh;$(FLUENT)/src/ht;$(FLUENT)/src/dx;$(FLUENT)/src/turbulence;$(FLUENT)/src/acoustics;$(FLUENT)/src/parallel;$(FLUENT)/src/etc;$(FLUENT)/src/ue;$(FLUENT)/src/dpm;$(FLUENT)/src/dbns;$(FLUENT)/cortex/src;$(FLUENT)/client/src;$(FLUENT)/tgrid/src;$(FLUENT)/multiport/src;$(FLUENT)/multiport/mpi_wrapper/src;$(FLUENT_BASE)/include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeBuildCommandLine>build.bat</NMakeBuildCommandLine>
+    <OutDir>$(SolutionDir)win64\3ddp_host\</OutDir>
+    <NMakeReBuildCommandLine>rebuild.bat</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>clean.bat</NMakeCleanCommandLine>
+    <IntDir>$(SolutionDir)win64\3ddp_host\</IntDir>
+    <TargetName>libudf</TargetName>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);include;$(FLUENT)/win64/3ddp_node;$(FLUENT)/win64/3ddp_host;$(FLUENT)/src/species;$(FLUENT)/src/io;$(FLUENT)/src/main;$(FLUENT)/src/addon-wrapper;$(FLUENT)/src/sphysics;$(FLUENT)/src/numerics;$(FLUENT)/src/pbns;$(FLUENT)/src/udf;$(FLUENT)/src/material;$(FLUENT)/src/models;$(FLUENT)/src/bc;$(FLUENT)/src/mphase;$(FLUENT)/src/storage;$(FLUENT)/src/amg;$(FLUENT)/src/util;$(FLUENT)/src/mesh;$(FLUENT)/src/ht;$(FLUENT)/src/dx;$(FLUENT)/src/turbulence;$(FLUENT)/src/acoustics;$(FLUENT)/src/parallel;$(FLUENT)/src/etc;$(FLUENT)/src/ue;$(FLUENT)/src/dpm;$(FLUENT)/src/dbns;$(FLUENT)/cortex/src;$(FLUENT)/client/src;$(FLUENT)/tgrid/src;$(FLUENT)/multiport/src;$(FLUENT)/multiport/mpi_wrapper/src;$(FLUENT_BASE)/include</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);include;$(FLUENT)/win64/3ddp_node;$(FLUENT)/win64/3ddp_host;$(FLUENT)/src/species;$(FLUENT)/src/io;$(FLUENT)/src/main;$(FLUENT)/src/addon-wrapper;$(FLUENT)/src/sphysics;$(FLUENT)/src/numerics;$(FLUENT)/src/pbns;$(FLUENT)/src/udf;$(FLUENT)/src/material;$(FLUENT)/src/models;$(FLUENT)/src/bc;$(FLUENT)/src/mphase;$(FLUENT)/src/storage;$(FLUENT)/src/amg;$(FLUENT)/src/util;$(FLUENT)/src/mesh;$(FLUENT)/src/ht;$(FLUENT)/src/dx;$(FLUENT)/src/turbulence;$(FLUENT)/src/acoustics;$(FLUENT)/src/parallel;$(FLUENT)/src/etc;$(FLUENT)/src/ue;$(FLUENT)/src/dpm;$(FLUENT)/src/dbns;$(FLUENT)/cortex/src;$(FLUENT)/client/src;$(FLUENT)/tgrid/src;$(FLUENT)/multiport/src;$(FLUENT)/multiport/mpi_wrapper/src;$(FLUENT_BASE)/include;</ExternalIncludePath>
+    <LibraryPath>$(FLUENT)/win64/3ddp_host;$(FLUENT)/multiport/win64/net/shared;$(LibraryPath)</LibraryPath>
+    <LibraryWPath>$(FLUENT)/win64/3ddp_host;$(FLUENT)/multiport/win64/mpi/shared;$(LibraryPath)</LibraryWPath>
+    <ExecutablePath>$(VC_ExecutablePath_x64);$(CommonExecutablePath);include;$(FLUENT)/win64/3ddp_node;$(FLUENT)/win64/3ddp_host;$(FLUENT)/src/species;$(FLUENT)/src/io;$(FLUENT)/src/main;$(FLUENT)/src/addon-wrapper;$(FLUENT)/src/sphysics;$(FLUENT)/src/numerics;$(FLUENT)/src/pbns;$(FLUENT)/src/udf;$(FLUENT)/src/material;$(FLUENT)/src/models;$(FLUENT)/src/bc;$(FLUENT)/src/mphase;$(FLUENT)/src/storage;$(FLUENT)/src/amg;$(FLUENT)/src/util;$(FLUENT)/src/mesh;$(FLUENT)/src/ht;$(FLUENT)/src/dx;$(FLUENT)/src/turbulence;$(FLUENT)/src/acoustics;$(FLUENT)/src/parallel;$(FLUENT)/src/etc;$(FLUENT)/src/ue;$(FLUENT)/src/dpm;$(FLUENT)/src/dbns;$(FLUENT)/cortex/src;$(FLUENT)/client/src;$(FLUENT)/tgrid/src;$(FLUENT)/multiport/src;$(FLUENT)/multiport/mpi_wrapper/src;$(FLUENT_BASE)/include</ExecutablePath>
+    <SourcePath>$(VC_SourcePath);include;$(FLUENT)/win64/3ddp_node;$(FLUENT)/win64/3ddp_host;$(FLUENT)/src/species;$(FLUENT)/src/io;$(FLUENT)/src/main;$(FLUENT)/src/addon-wrapper;$(FLUENT)/src/sphysics;$(FLUENT)/src/numerics;$(FLUENT)/src/pbns;$(FLUENT)/src/udf;$(FLUENT)/src/material;$(FLUENT)/src/models;$(FLUENT)/src/bc;$(FLUENT)/src/mphase;$(FLUENT)/src/storage;$(FLUENT)/src/amg;$(FLUENT)/src/util;$(FLUENT)/src/mesh;$(FLUENT)/src/ht;$(FLUENT)/src/dx;$(FLUENT)/src/turbulence;$(FLUENT)/src/acoustics;$(FLUENT)/src/parallel;$(FLUENT)/src/etc;$(FLUENT)/src/ue;$(FLUENT)/src/dpm;$(FLUENT)/src/dbns;$(FLUENT)/cortex/src;$(FLUENT)/client/src;$(FLUENT)/tgrid/src;$(FLUENT)/multiport/src;$(FLUENT)/multiport/mpi_wrapper/src;$(FLUENT_BASE)/include</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='3ddp_node|x64'">
+    <NMakeIncludeSearchPath>include;$(FLUENT)/win64/3ddp_node;$(FLUENT)/win64/3ddp_host;$(FLUENT)/src/species;$(FLUENT)/src/io;$(FLUENT)/src/main;$(FLUENT)/src/addon-wrapper;$(FLUENT)/src/sphysics;$(FLUENT)/src/numerics;$(FLUENT)/src/pbns;$(FLUENT)/src/udf;$(FLUENT)/src/material;$(FLUENT)/src/models;$(FLUENT)/src/bc;$(FLUENT)/src/mphase;$(FLUENT)/src/storage;$(FLUENT)/src/amg;$(FLUENT)/src/util;$(FLUENT)/src/mesh;$(FLUENT)/src/ht;$(FLUENT)/src/dx;$(FLUENT)/src/turbulence;$(FLUENT)/src/acoustics;$(FLUENT)/src/parallel;$(FLUENT)/src/etc;$(FLUENT)/src/ue;$(FLUENT)/src/dpm;$(FLUENT)/src/dbns;$(FLUENT)/cortex/src;$(FLUENT)/client/src;$(FLUENT)/tgrid/src;$(FLUENT)/multiport/src;$(FLUENT)/multiport/mpi_wrapper/src;$(FLUENT_BASE)/include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeBuildCommandLine>build.bat</NMakeBuildCommandLine>
+    <OutDir>$(SolutionDir)win64\3ddp_node\</OutDir>
+    <NMakeReBuildCommandLine>rebuild.bat</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>clean.bat</NMakeCleanCommandLine>
+    <IntDir>$(SolutionDir)win64\3ddp_node\</IntDir>
+    <TargetName>libudf</TargetName>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);include;$(FLUENT)/win64/3ddp_node;$(FLUENT)/win64/3ddp_host;$(FLUENT)/src/species;$(FLUENT)/src/io;$(FLUENT)/src/main;$(FLUENT)/src/addon-wrapper;$(FLUENT)/src/sphysics;$(FLUENT)/src/numerics;$(FLUENT)/src/pbns;$(FLUENT)/src/udf;$(FLUENT)/src/material;$(FLUENT)/src/models;$(FLUENT)/src/bc;$(FLUENT)/src/mphase;$(FLUENT)/src/storage;$(FLUENT)/src/amg;$(FLUENT)/src/util;$(FLUENT)/src/mesh;$(FLUENT)/src/ht;$(FLUENT)/src/dx;$(FLUENT)/src/turbulence;$(FLUENT)/src/acoustics;$(FLUENT)/src/parallel;$(FLUENT)/src/etc;$(FLUENT)/src/ue;$(FLUENT)/src/dpm;$(FLUENT)/src/dbns;$(FLUENT)/cortex/src;$(FLUENT)/client/src;$(FLUENT)/tgrid/src;$(FLUENT)/multiport/src;$(FLUENT)/multiport/mpi_wrapper/src;$(FLUENT_BASE)/include</IncludePath>
+    <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath)</ExternalIncludePath>
+    <LibraryPath>$(FLUENT)/win64/3ddp_node;$(FLUENT)/multiport/win64/mpi/shared;$(LibraryPath)</LibraryPath>
+    <LibraryWPath>$(LibraryPath)</LibraryWPath>
+    <ExecutablePath>$(VC_ExecutablePath_x64);$(CommonExecutablePath)</ExecutablePath>
+    <SourcePath>$(VC_SourcePath);include;$(FLUENT)/win64/3ddp_node;$(FLUENT)/win64/3ddp_host;$(FLUENT)/src/species;$(FLUENT)/src/io;$(FLUENT)/src/main;$(FLUENT)/src/addon-wrapper;$(FLUENT)/src/sphysics;$(FLUENT)/src/numerics;$(FLUENT)/src/pbns;$(FLUENT)/src/udf;$(FLUENT)/src/material;$(FLUENT)/src/models;$(FLUENT)/src/bc;$(FLUENT)/src/mphase;$(FLUENT)/src/storage;$(FLUENT)/src/amg;$(FLUENT)/src/util;$(FLUENT)/src/mesh;$(FLUENT)/src/ht;$(FLUENT)/src/dx;$(FLUENT)/src/turbulence;$(FLUENT)/src/acoustics;$(FLUENT)/src/parallel;$(FLUENT)/src/etc;$(FLUENT)/src/ue;$(FLUENT)/src/dpm;$(FLUENT)/src/dbns;$(FLUENT)/cortex/src;$(FLUENT)/client/src;$(FLUENT)/tgrid/src;$(FLUENT)/multiport/src;$(FLUENT)/multiport/mpi_wrapper/src;$(FLUENT_BASE)/include</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UDF_VS|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include;$(FLUENT)/win64/3ddp_node;$(FLUENT)/win64/3ddp_host;$(FLUENT)/src/species;$(FLUENT)/src/io;$(FLUENT)/src/main;$(FLUENT)/src/addon-wrapper;$(FLUENT)/src/sphysics;$(FLUENT)/src/numerics;$(FLUENT)/src/pbns;$(FLUENT)/src/udf;$(FLUENT)/src/material;$(FLUENT)/src/models;$(FLUENT)/src/bc;$(FLUENT)/src/mphase;$(FLUENT)/src/storage;$(FLUENT)/src/amg;$(FLUENT)/src/util;$(FLUENT)/src/mesh;$(FLUENT)/src/ht;$(FLUENT)/src/dx;$(FLUENT)/src/turbulence;$(FLUENT)/src/acoustics;$(FLUENT)/src/parallel;$(FLUENT)/src/etc;$(FLUENT)/src/ue;$(FLUENT)/src/dpm;$(FLUENT)/src/dbns;$(FLUENT)/cortex/src;$(FLUENT)/client/src;$(FLUENT)/tgrid/src;$(FLUENT)/multiport/src;$(FLUENT)/multiport/mpi_wrapper/src;$(FLUENT_BASE)/include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>mport.lib;fl2220.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(FLUENT)/win64/3ddp_host;$(FLUENT)/multiport/win64/net/shared</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <ShowProgress>NotSet</ShowProgress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='3ddp_node|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include;$(FLUENT)/win64/3ddp_node;$(FLUENT)/win64/3ddp_host;$(FLUENT)/src/species;$(FLUENT)/src/io;$(FLUENT)/src/main;$(FLUENT)/src/addon-wrapper;$(FLUENT)/src/sphysics;$(FLUENT)/src/numerics;$(FLUENT)/src/pbns;$(FLUENT)/src/udf;$(FLUENT)/src/material;$(FLUENT)/src/models;$(FLUENT)/src/bc;$(FLUENT)/src/mphase;$(FLUENT)/src/storage;$(FLUENT)/src/amg;$(FLUENT)/src/util;$(FLUENT)/src/mesh;$(FLUENT)/src/ht;$(FLUENT)/src/dx;$(FLUENT)/src/turbulence;$(FLUENT)/src/acoustics;$(FLUENT)/src/parallel;$(FLUENT)/src/etc;$(FLUENT)/src/ue;$(FLUENT)/src/dpm;$(FLUENT)/src/dbns;$(FLUENT)/cortex/src;$(FLUENT)/client/src;$(FLUENT)/tgrid/src;$(FLUENT)/multiport/src;$(FLUENT)/multiport/mpi_wrapper/src;$(FLUENT_BASE)/include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>mport.lib;fl_mpi2220.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <ShowProgress>NotSet</ShowProgress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\compute_source.cpp" />
+    <ClCompile Include="src\csv_utils.cpp" />
+    <ClCompile Include="src\file_types.cpp" />
+    <ClCompile Include="src\global_vars.cpp" />
+    <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\compute_source.h" />
+    <ClInclude Include="src\csv_utils.h" />
+    <ClInclude Include="src\file_types.h" />
+    <ClInclude Include="src\global_vars.h" />
+    <ClInclude Include="src\Warningless_udf.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

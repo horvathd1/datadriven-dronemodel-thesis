@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <FLUENT_BASE>C:/Program Files/ANSYS Inc/v222/fluent</FLUENT_BASE>
+    <RELEASE>fluent22.2.0</RELEASE>
+    <FLUENT>$(FLUENT_BASE)/$(RELEASE)</FLUENT>
+    <SCONS>C:\Program Files\ANSYS Inc\v222\commonfiles\CPython\3_7\winx64\Release\python\scripts</SCONS>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="FLUENT_BASE">
+      <Value>$(FLUENT_BASE)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="RELEASE">
+      <Value>$(RELEASE)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="FLUENT">
+      <Value>$(FLUENT)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="SCONS">
+      <Value>$(SCONS)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
