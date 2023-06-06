@@ -43,8 +43,8 @@ classdef Drone
                 F2=obj.data_driven_force(omega2,dx*cos(phi)+dy*sin(phi), ...
                     -dy*cos(phi)-dx*sin(phi)+obj.L*dphi);
             else
-                F1=obj.simple_force(omega1,dx*cos(phi)+dy*sin(phi),-dy*cos(phi)-dx*sin(phi));
-                F2=obj.simple_force(omega2,dx*cos(phi)+dy*sin(phi),-dy*cos(phi)-dx*sin(phi));
+                F1=obj.simple_force(omega1,dx*cos(phi)+dy*sin(phi),-dy*cos(phi)-dx*sin(phi)-obj.L*dphi);
+                F2=obj.simple_force(omega2,dx*cos(phi)+dy*sin(phi),-dy*cos(phi)-dx*sin(phi)+obj.L*dphi);
             end
             u1=F1+F2;
             u2=obj.L/2*(F1-F2);
